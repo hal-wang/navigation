@@ -1,0 +1,12 @@
+/functions
+
+dist
+node_modules
+package-lock.json
+yarn.lock
+
+.cache*
+.env.local
+.env.*.local
+
+TCBSAM.yaml
