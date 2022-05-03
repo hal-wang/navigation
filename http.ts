@@ -1,7 +1,6 @@
 import "@sfajs/http";
 import { SfaHttp } from "@sfajs/http";
 import { setStartup } from "./src";
-import * as net from "net";
 
 const startup = setStartup(
   new SfaHttp().useHttpJsonBody().use(async (ctx, next) => {
