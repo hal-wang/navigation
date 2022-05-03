@@ -21,7 +21,10 @@
           "functionRootPath": "dist",
           "functions": [
             {
-              "name": "navigation"
+              "name": "navigation",
+              "envVariables": {
+                "DEFAULT_URL": "{{env.DEFAULT_URL}}"
+              }
             }
           ]
         }

@@ -38,7 +38,7 @@ export default class NavigatorMiddleware extends Middleware {
 
   redirectDefault(): void {
     if (!this.ctx.req.method || this.ctx.req.method == HttpMethod.get) {
-      this.redirect("https://hal.wang", 301);
+      this.redirect(process.env.DEFAULT_URL ?? "", 301);
     } else {
       this.notFoundMsg();
     }
