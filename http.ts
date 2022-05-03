@@ -1,13 +1,28 @@
 import "@sfajs/http";
 import { SfaHttp } from "@sfajs/http";
 import { setStartup } from "./src";
+import * as net from "net";
 
-setStartup(
+const startup = setStartup(
   new SfaHttp().useHttpJsonBody().use(async (ctx, next) => {
     console.log(ctx.req.method, ctx.req.path);
     await next();
   }),
   true
-).listen(2333);
+);
 
-console.log("start: http://localhost:2333");
+function listen(port: number) {
+  const server = startup.listen(port);
+  server.on("listening", () => {
+    console.log(`start: http://localhost:${port}`);
+  });
+  server.on("error", (err) => {
+    if (err.code == "EADDRINUSE") {
+      listen(port + 1);
+    } else {
+      console.error("Failed to start");
+    }
+  });
+}
+
+listen(2333);
