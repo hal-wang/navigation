@@ -1,5 +1,5 @@
-import { HttpMethod, Middleware } from "@sfajs/core";
-import { Inject } from "@sfajs/inject";
+import { HttpMethod, Middleware } from "@ipare/core";
+import { Inject } from "@ipare/inject";
 import { NavigationEntity } from "../entities/navigation.entity";
 import { NavTypeEnum } from "../enums/nav-type.enum";
 import { CollectionService } from "../services/collection.service";

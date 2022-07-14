@@ -24,7 +24,9 @@
               "name": "navigation",
               "envVariables": {
                 "DEFAULT_URL": "{{env.DEFAULT_URL}}"
-              }
+              },
+              "runtime": "Nodejs12.16",
+              "memorySize": 256
             }
           ]
         }
