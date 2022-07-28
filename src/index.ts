@@ -9,8 +9,5 @@ export const main = async (
   console.log("event", JSON.stringify(event));
   console.log("context", JSON.stringify(context));
 
-  (Object as any).hasOwn = (object: object, key: string) => {
-    return object.hasOwnProperty(key);
-  };
   return await app.run(event, context);
 };
