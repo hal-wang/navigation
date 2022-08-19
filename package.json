@@ -13,14 +13,11 @@
     "@ipare/core": "^1.8.4",
     "@ipare/env": "^1.8.4",
     "@ipare/inject": "^1.8.4",
-    "@ipare/lambda": "^1.8.4",
-    "source-map-support": "^0.5.21"
+    "@ipare/lambda": "^1.8.4"
   },
   "devDependencies": {
-    "@cloudbase/cli": "^2.1.2",
     "@ipare/cli": "^0.4.5",
     "@types/node": "^18.7.6",
-    "@types/xml2js": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",
