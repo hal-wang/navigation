@@ -1,7 +1,7 @@
 import { LambdaStartup } from "@ipare/lambda";
 import startup from "./startup";
 
-const app = startup(new LambdaStartup());
+const app = startup(new LambdaStartup(), "production");
 export const main = async (
   event: Record<string, unknown>,
   context: Record<string, unknown>

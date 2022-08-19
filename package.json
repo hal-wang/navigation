@@ -3,30 +3,29 @@
   "version": "0.2.2",
   "main": "index.js",
   "scripts": {
-    "dev": "ipare start --mode development --watch",
+    "dev": "ipare start --mode local",
     "start": "npm run dev",
     "build": "ipare build",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "@cloudbase/node-sdk": "^2.9.1",
-    "@ipare/core": "^1.7.4",
-    "@ipare/inject": "^1.7.4",
-    "@ipare/lambda": "^1.7.4",
+    "@ipare/core": "^1.8.4",
+    "@ipare/env": "^1.8.4",
+    "@ipare/inject": "^1.8.4",
+    "@ipare/lambda": "^1.8.4",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@cloudbase/cli": "^2.1.0",
-    "@ipare/cli": "^0.3.4",
-    "@types/node": "^18.6.2",
+    "@cloudbase/cli": "^2.1.2",
+    "@ipare/cli": "^0.4.5",
+    "@types/node": "^18.7.6",
     "@types/xml2js": "^0.4.11",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
-    "dotenv": "^16.0.1",
-    "eslint": "^8.20.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "prettier": "^2.7.1"
   }
 }
