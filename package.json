@@ -1,22 +1,22 @@
 {
   "name": "navigation",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "index.js",
   "scripts": {
-    "dev": "ipare start --mode local",
-    "start": "npm run dev",
+    "start": "ipare start --mode local",
+    "dev": "npm start",
     "build": "ipare build",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "@cloudbase/node-sdk": "^2.9.1",
-    "@ipare/core": "^1.8.4",
-    "@ipare/env": "^1.8.4",
-    "@ipare/inject": "^1.8.4",
-    "@ipare/lambda": "^1.8.4"
+    "@ipare/core": "^1.8.5",
+    "@ipare/env": "^1.8.5",
+    "@ipare/inject": "^1.8.5",
+    "@ipare/lambda": "^1.8.5"
   },
   "devDependencies": {
-    "@ipare/cli": "^0.4.5",
+    "@ipare/cli": "^0.4.6",
     "@types/node": "^18.7.6",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
