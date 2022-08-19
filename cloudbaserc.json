@@ -10,7 +10,6 @@
         "type": "execCommand",
         "commands": [
           "npm i -g yarn --force && yarn config set registry https://registry.npmjs.org",
-          "npm i -g @cloudbase/cli --force",
           "yarn install && yarn build"
         ]
       }

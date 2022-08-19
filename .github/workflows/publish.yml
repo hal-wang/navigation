@@ -25,5 +25,6 @@ jobs:
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
         run: |
-          npx tcb login --apiKeyId $TENCENT_SECRET_ID --apiKey $TENCENT_SECRET_KEY
-          npx tcb framework deploy --mode local
+          npm i -g @cloudbase/cli --force
+          tcb login --apiKeyId $TENCENT_SECRET_ID --apiKey $TENCENT_SECRET_KEY
+          tcb framework deploy --mode local
