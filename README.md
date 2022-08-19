@@ -49,20 +49,20 @@ GET 请求找不到跳转目标时，会跳转到默认链接，否则返回 404
 
 如果现有功能不能满足，你可以进行二次开发
 
-### 运行 API
+### 本地运行
 
 在项目下创建文件 `.env.local`，内容如下
 
 ```
-SCF_NAMESPACE=cloudbase环境id
+ENV_ID=cloudbase环境id
 SECRET_KEY=腾讯云 secret key
 SECRET_ID=腾讯云 secret id
-DEFAULT_URL=默认链接
+DEFAULT_URL=默认跳转链接
 ```
 
-先安装依赖，在项目下执行
+安装依赖，在项目下执行
 
-```bash
+```sh
 yarn install
 ```
 
@@ -70,7 +70,7 @@ yarn install
 
 或在项目下执行
 
-```bash
+```sh
 yarn dev
 ```
 
@@ -80,9 +80,7 @@ yarn dev
 
 #### cli 发布
 
-确保项目根目录下有 `.env.local`
-
-内容包含
+确保项目根目录下有文件 `.env.local`，内容包含
 
 ```
 ENV_ID=cloudbase环境id
@@ -91,13 +89,15 @@ DEFAULT_URL=默认链接
 
 在项目根目录下运行以下命令发布
 
-```bash
+```sh
 yarn deploy
 ```
 
 #### GitHub Actions
 
 仓库增加 Secrets，在 `Settings -> Secrets -> Actions`，点击 `New repository secret` 按钮
+
+增加如下记录
 
 - TENCENT_SECRET_ID: 腾讯云 secret id
 - TENCENT_SECRET_KEY: 腾讯云 secret key
