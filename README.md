@@ -66,7 +66,7 @@ DEFAULT_URL=默认跳转链接
 安装依赖，在项目下执行
 
 ```sh
-yarn install
+npm install
 ```
 
 再使用 vscode 打开项目，直接 F5 开始调试
@@ -74,7 +74,7 @@ yarn install
 或在项目下执行
 
 ```sh
-yarn dev
+npm start
 ```
 
 ### 发布
@@ -93,7 +93,8 @@ DEFAULT_URL=默认链接
 在项目根目录下运行以下命令发布
 
 ```sh
-yarn deploy
+npm install @cloudbase/cli -g
+npm run deploy
 ```
 
 #### GitHub Actions

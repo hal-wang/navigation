@@ -6,7 +6,8 @@
     "start": "ipare start --mode local",
     "dev": "npm start",
     "build": "ipare build",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "deploy": "tcb login && tcb framework deploy --mode local"
   },
   "dependencies": {
     "@cloudbase/node-sdk": "^2.9.1",
