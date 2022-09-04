@@ -13,8 +13,6 @@
     "sourceMap": true
   },
   "exclude": [
-    "test",
     "dist",
-    "http.ts",
   ]
 }
