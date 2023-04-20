@@ -1,17 +1,20 @@
-import "@ipare/inject";
-import "@ipare/env";
-import "@ipare/logger";
+import "@halsp/inject";
+import "@halsp/logger";
 
-import { Startup } from "@ipare/core";
+import { HttpStartup } from "@halsp/http";
+import { getVersion } from "@halsp/env";
 import { CollectionService } from "./services/collection.service";
 import { CbappService } from "./services/cbapp.service";
-import { InjectType } from "@ipare/inject";
+import { InjectType } from "@halsp/inject";
 import NavigatorMiddleware from "./middlewares/navigator.middleware";
 
-export default function <T extends Startup>(startup: T, mode: string): T {
+export default function <T extends HttpStartup>(startup: T): T {
   return startup
-    .useVersion()
-    .useEnv(mode)
+    .use(async (ctx, next) => {
+      ctx.res.set("version", (await getVersion()) ?? "");
+      await next();
+    })
+    .useEnv()
     .useInject()
     .inject(CollectionService, InjectType.Singleton)
     .inject(CbappService, InjectType.Singleton)

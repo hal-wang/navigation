@@ -1,5 +1,5 @@
-import { HttpMethod, Middleware } from "@ipare/core";
-import { Inject } from "@ipare/inject";
+import { Middleware } from "@halsp/core";
+import { Inject } from "@halsp/inject";
 import { NavigationEntity } from "../entities/navigation.entity";
 import { NavTypeEnum } from "../enums/nav-type.enum";
 import { CollectionService } from "../services/collection.service";
@@ -37,7 +37,7 @@ export default class NavigatorMiddleware extends Middleware {
   }
 
   redirectDefault(): void {
-    if (!this.ctx.req.method || this.ctx.req.method == HttpMethod.get) {
+    if (!this.ctx.req.method || this.ctx.req.method == "GET") {
       if (process.env.DEFAULT_URL) {
         this.redirect(process.env.DEFAULT_URL, 301);
       } else {

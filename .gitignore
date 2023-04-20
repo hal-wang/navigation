@@ -3,9 +3,7 @@
 dist
 node_modules
 package-lock.json
-yarn.lock
 
-.ipare-cache
 .env.local
 .env.*.local
 
